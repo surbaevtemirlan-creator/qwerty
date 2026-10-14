@@ -52,16 +52,14 @@ export const deleteAvatar = () => {
 
 export const registration = async (email, password) => {
   try {
-    const response = await axios.post(
-      `http://localhost:5000/api/auth/registration`,
-      {
-        email,
-        password,
-      },
-    );
+    const response = await axios.post(`${API_URL}/auth/registration`, {
+      email,
+      password,
+    });
     alert(response.data.message);
   } catch (e) {
-    alert(e.response.data.message);
+    // e.response нет, если сервер недоступен (например, «просыпается» на бесплатном Render)
+    alert(e.response?.data?.message || 'Сервер недоступен, попробуйте через минуту');
   }
 };
 
@@ -69,7 +67,7 @@ export const registration = async (email, password) => {
 export const login = (email, password) => {
   return async dispatch => {
     try {
-      const response = await axios.post(`http://localhost:5000/api/auth/login`, {
+      const response = await axios.post(`${API_URL}/auth/login`, {
         email,
         password
       });
@@ -77,9 +75,8 @@ export const login = (email, password) => {
       localStorage.setItem('token', response.data.token);
       // Записываем пользователя в Redux стор
       dispatch(setUser(response.data.user));
-      console.log(response.data);
     } catch (e) {
-      alert(e.response.data.message);
+      alert(e.response?.data?.message || 'Сервер недоступен, попробуйте через минуту');
     }
   };
 };
