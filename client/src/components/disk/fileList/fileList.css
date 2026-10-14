@@ -1,0 +1,43 @@
+.filelist {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.filelist__header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-weight: 700;
+  color: #566885;
+  background: #f4f6fa;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+/* Колонки заголовка должны совпадать с колонками строки файла */
+.filelist__name {
+  flex: 1;
+  padding-left: 38px; /* ширина иконки в строке файла */
+}
+
+.filelist__date {
+  width: 140px;
+}
+
+.filelist__size {
+  width: 100px;
+  text-align: right;
+}
+
+.filelist__actions {
+  width: 84px; /* столько же, сколько .file__actions */
+}
+
+.filelist__empty {
+  padding: 40px 0;
+  text-align: center;
+  color: #566885;
+}

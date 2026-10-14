@@ -1,0 +1,28 @@
+.diskspace {
+  flex: 1;
+  min-width: 0;
+}
+
+.diskspace__text {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #566885;
+}
+
+.diskspace__bar {
+  height: 8px;
+  background: #eef0f4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.diskspace__used {
+  height: 100%;
+  background: #566885;
+  transition: width 0.3s;
+}
+
+/* занято 90% и больше */
+.diskspace__used--full {
+  background: #d64545;
+}

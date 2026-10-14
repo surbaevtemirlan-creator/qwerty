@@ -1,0 +1,56 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 4px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.breadcrumbs__sep {
+  margin: 0 6px;
+  color: #9aa6b8;
+}
+
+/* длинные названия обрезаются, полное имя видно во всплывающей подсказке */
+.breadcrumbs__link,
+.breadcrumbs__current {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.breadcrumbs__link {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: inherit;
+  color: #566885;
+  text-decoration: none;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.breadcrumbs__link:hover {
+  color: #404f68;
+  background: #e6eaf1;
+  text-decoration: underline;
+}
+
+.breadcrumbs__link:focus-visible {
+  outline: 2px solid #566885;
+  outline-offset: 1px;
+}
+
+.breadcrumbs__current {
+  padding: 3px 8px;
+  font-weight: 700;
+  color: #08060d;
+}

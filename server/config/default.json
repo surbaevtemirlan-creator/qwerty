@@ -1,0 +1,7 @@
+{
+  "serverPort": 5000,
+  "filePath": "storage/files",
+  "avatarPath": "storage/avatars",
+  "tempPath": "storage/tmp",
+  "maxUploadSize": 2147483648
+}

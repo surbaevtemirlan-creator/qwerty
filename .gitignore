@@ -1,0 +1,40 @@
+# Зависимости и сборка
+node_modules/
+dist/
+dist-ssr/
+build/
+
+# Секреты и локальные настройки (шаблон лежит в server/.env.example)
+.env
+.env.*
+!.env.example
+*.local
+# локальные переопределения пакета config (server/config/local.json и т.п.)
+server/config/local*.json
+
+# Загруженные пользователями файлы (по умолчанию config/default.json кладёт их
+# вне репозитория, но если filePath поменяют на путь внутри проекта — в git их не нужно)
+server/storage/
+server/files/
+server/avatars/
+
+# Логи
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Редакторы и ОС
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

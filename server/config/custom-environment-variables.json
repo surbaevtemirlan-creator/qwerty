@@ -1,0 +1,9 @@
+{
+  "serverPort": "PORT",
+  "dbUrl": "DB_URL",
+  "secretKey": "JWT_SECRET",
+  "filePath": "FILE_PATH",
+  "avatarPath": "AVATAR_PATH",
+  "tempPath": "TEMP_PATH",
+  "maxUploadSize": "MAX_UPLOAD_SIZE"
+}
